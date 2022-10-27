@@ -66,3 +66,42 @@ function calcular(){
 	document.getElementById("totComision").value = (total * 0.03).toFixed(2);
 	document.getElementById("total").value = (total + (total * 0.03)).toFixed(2);
 }
+
+// codificación de la función registrar
+function registrar(){
+    let parrafo =document.getElementById('Registros');
+    let subtotal = document.getElementById('subtotal').value;
+    let comision = document.getElementById("totComision").value
+	let total = document.getElementById("total").value
+    let cambio = document.getElementById('cantidad').value;
+    let selector1 = document.getElementById('MonedaOrigen').value;
+    let selector2 = document.getElementById('MonedaDestino').value;
+    let monedaOrigen = "";
+    let monedaDestino = "";
+// obtener las monedas
+    if(selector1 == "1"){
+        monedaOrigen = "Pesos Mexicanos"
+    }else if (selector1 == "2"){
+        monedaOrigen = "Dolar Americano"
+    }else if (selector1 == "3"){
+        monedaOrigen = "Dolar Canadiense"
+    }else if (selector1 == "4"){
+        monedaOrigen = "Euro"
+    }
+
+    if(selector2 == "1"){
+        monedaDestino = "Pesos Mexicanos"
+    }else if (selector2 == "2"){
+        monedaDestino = "Dolar Americano"
+    }else if (selector2 == "3"){
+        monedaDestino= "Dolar Canadiense"
+    }else if (selector2 == "4"){
+        monedaDestino = "Euro"
+    }
+
+    if(subtotal == ""){
+        alert('Realice una operación');
+    }else{
+        parrafo.innerHTML += "<p>" + "$" + cambio + " de "+ monedaOrigen + " a " + monedaDestino + " Subtotal: "+subtotal+ " Comisión de $" +comision+ " total a pagar $"+total+ "</p>"
+    }
+}

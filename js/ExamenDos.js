@@ -20,3 +20,49 @@ function change(){
     
     selector2.innerHTML = mostrar;
 }
+
+// Codificación de la función calcular
+function calcular(){
+    let cambio = document.getElementById('cantidad').value;
+    let selector1 = document.getElementById('MonedaOrigen').value;
+    let selector2 = document.getElementById('MonedaDestino').value;
+    let total = 0;
+
+    if(selector1 == "1"){
+        if(selector2 == "2"){
+            total = cambio/19.85;
+        }else if(selector2 == "3"){
+            total = (cambio/19.85) * 1.35;
+        }else if(selector2 == "4"){
+            total = (cambio/19.85) * 0.99;
+        }
+    }else if(selector1 == "2"){
+        if(selector2 == "1"){
+            total = cambio * 19.85;
+        }else if(selector2 == "3"){
+            total = cambio * 1.35;
+        }else if(selector2 == "4"){
+            total = cambio * 0.99;
+        }
+    }else if(selector1 == "3"){
+        if(selector2 == "1"){
+            total = (cambio/1.35) * 19.85;
+        }else if(selector2 == "2"){
+            total = (cambio/1.35)
+        }else if(selector2 == "4"){
+            total = (cambio/1.35) * 0.99;
+        }
+    }else if(selector1 == "4"){
+        if(selector2 == "1"){
+            total = (cambio/0.99) * 19.85
+        }else if(selector2 == "2"){
+            total = cambio/0.99;
+        }else if(selector2 == "3"){
+            total = (cambio/0.99) * 1.35;
+        }
+    }
+    // Imprimir los resultados
+    document.getElementById("subtotal").value = (total).toFixed(2);
+	document.getElementById("totComision").value = (total * 0.03).toFixed(2);
+	document.getElementById("total").value = (total + (total * 0.03)).toFixed(2);
+}

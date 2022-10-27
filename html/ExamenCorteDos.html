@@ -14,7 +14,7 @@
     </header>
     <div id="contenedor">
         <label for="">Cantidad</label>
-        <input type="number" required>
+        <input type="number" id="cantidad" required>
         <label for="">Moneda de Origen</label>
         <select name="" id="MonedaOrigen" onchange="change()">
             <option value="0" disabled selected>Seleccione una moneda</option>
@@ -31,10 +31,10 @@
             <option value="3">Dolar Canadiense</option>
             <option value="4">Euro</option>
         </select>
-        <input type="text" readonly placeholder="Subtotal">
-        <input type="text" readonly placeholder="Total comision">
-        <input type="text" readonly placeholder="Total a pagar">
-        <button onclick="Calcular()">Calcular</button>
+        <input type="text" readonly placeholder="Subtotal" id="subtotal">
+        <input type="text" readonly placeholder="Total comision" id="totComision">
+        <input type="text" readonly placeholder="Total a pagar" id="total">
+        <button onclick="calcular()">Calcular</button>
         <button onclick="Registro()">Registro</button>
         <div id="Registros">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 

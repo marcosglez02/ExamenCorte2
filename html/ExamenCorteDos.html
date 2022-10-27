@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen segundo corte</title>
+    <link rel="stylesheet" href="/css/EstilosExamenDos.css">
+    <script src="/js/ExamenDos.js"></script>
 </head>
 <body>
-    
+    <header id="Encabezado">
+        <h1>Práctica de exmanen</h1>
+    </header>
+    <div id="contenedor">
+        <label for="">Cantidad</label>
+        <input type="number" required>
+        <label for="">Moneda de Origen</label>
+        <select name="" id="MonedaOrigen" onchange="change()">
+            <option value="0" disabled selected>Seleccione una moneda</option>
+            <option value="1">Peso Mexicano</option>
+            <option value="2">Dolar Americano</option>
+            <option value="3">Dolar Canadiense</option>
+            <option value="4">Euro</option>
+        </select>
+        <label for="">Moneda Destino</label>
+        <select name="" id="MonedaDestino">
+            <option value="0" disabled selected>Seleccione una moneda</option>
+            <option value="1">Peso Mexicano</option>
+            <option value="2">Dolar Americano</option>
+            <option value="3">Dolar Canadiense</option>
+            <option value="4">Euro</option>
+        </select>
+        <input type="text" readonly placeholder="Subtotal">
+        <input type="text" readonly placeholder="Total comision">
+        <input type="text" readonly placeholder="Total a pagar">
+        <button onclick="Calcular()">Calcular</button>
+        <button onclick="Registro()">Registro</button>
+        <div id="Registros">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Accusamus corporis voluptates aliquam rerum neque ratione provident,
+                 dolor nobis accusantium expedita ut dignissimos reprehenderit qui impedit. 
+                 Sit perspiciatis voluptatum non incidunt.</p>
+        </div>
+    </div>
+    <footer id="piePagina">
+        <h3>pie de página</h3>
+    </footer>
 </body>
 </html>

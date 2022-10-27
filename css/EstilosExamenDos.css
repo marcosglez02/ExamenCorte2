@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+#Encabezado{
+    background-color: aqua;
+    text-align: center;
+}
+#Encabezado>h1{
+    background-color: aqua;
+    padding: 1em;
+}
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    background-color: blueviolet;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+#Registros{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 100%;
+
+}
+#piePagina{
+    background-color: bisque;
+    text-align: center;
+}
+#piePagina >h3{
+    padding: 1em;
+}

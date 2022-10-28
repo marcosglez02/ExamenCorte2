@@ -65,6 +65,7 @@ function calcular(){
     document.getElementById("subtotal").value = (total).toFixed(2);
 	document.getElementById("totComision").value = (total * 0.03).toFixed(2);
 	document.getElementById("total").value = (total + (total * 0.03)).toFixed(2);
+    
 }
 
 // codificación de la función registrar
@@ -104,4 +105,18 @@ function registrar(){
     }else{
         parrafo.innerHTML += "<p>" + "$" + cambio + " de "+ monedaOrigen + " a " + monedaDestino + " Subtotal: "+subtotal+ " Comisión de $" +comision+ " total a pagar $"+total+ "</p>"
     }
+    document.getElementById('TotalFinal').value += parseFloat(total.toFixed(2));
+}
+
+// creación función borrar
+function borrar(){
+    document.getElementById('Registros');
+    document.getElementById('subtotal').value = "";
+    document.getElementById("totComision").value = ""
+	document.getElementById("total").value = ""
+    document.getElementById('cantidad').value = "";
+    document.getElementById('MonedaOrigen').value = "0";
+    document.getElementById('MonedaDestino').value = "0";
+    let parrafo = document.getElementById('Registros');
+    parrafo.innerHTML = "";
 }

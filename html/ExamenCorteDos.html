@@ -36,10 +36,21 @@
         <input type="text" readonly placeholder="Total a pagar" id="total">
         <button onclick="calcular()">Calcular</button>
         <button onclick="registrar()">Registro</button>
+        <div id="contenedor">
+            <h2>Registros</h2>
         <div id="Registros">
             
         </div>
+        <button id="Borrar" onclick="borrar()">Borrar</button>
+        </div>
+        
     </div>
+    
+    <div style="margin-left: 6em;">
+        <label for="">Total final</label>
+        <input type="text" readonly id="TotalFinal">
+    </div>
+    
     <footer id="piePagina">
         <h3>pie de página</h3>
     </footer>

@@ -1,3 +1,4 @@
+let totalfinal =0;
 // Creación de la función change
 function change(){
     let selector1 = document.getElementById('MonedaOrigen').value;
@@ -66,6 +67,7 @@ function calcular(){
 	document.getElementById("totComision").value = (total * 0.03).toFixed(2);
 	document.getElementById("total").value = (total + (total * 0.03)).toFixed(2);
     
+    
 }
 
 // codificación de la función registrar
@@ -79,6 +81,7 @@ function registrar(){
     let selector2 = document.getElementById('MonedaDestino').value;
     let monedaOrigen = "";
     let monedaDestino = "";
+    let totalfinal = document.getElementById('TotalFinal').value;
 // obtener las monedas
     if(selector1 == "1"){
         monedaOrigen = "Pesos Mexicanos"
@@ -103,9 +106,10 @@ function registrar(){
     if(subtotal == ""){
         alert('Realice una operación');
     }else{
-        parrafo.innerHTML += "<p>" + "$" + cambio + " de "+ monedaOrigen + " a " + monedaDestino + " Subtotal: "+subtotal+ " Comisión de $" +comision+ " total a pagar $"+total+ "</p>"
+        parrafo.innerHTML += "<p>" + "$" + cambio + " de "+ monedaOrigen + " a " + monedaDestino + " Subtotal: "+subtotal+ " Comisión de $" +comision+ " total a pagar $"+total+ " en " +monedaDestino+ "</p>"
     }
-    document.getElementById('TotalFinal').value += parseFloat(total.toFixed(2));
+    totalfinal = totalfinal + total;
+    document.getElementById('TotalFinal').value = totalfinal;
 }
 
 // creación función borrar
